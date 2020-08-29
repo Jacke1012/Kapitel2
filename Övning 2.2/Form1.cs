@@ -136,6 +136,7 @@ namespace Övning_2_2
             DialogResult result = MessageBox.Show(string.Format("The {0} field was inputed wrong", inputThatWasWrong)
                 , "Parsing Error", MessageBoxButtons.OK);
         }
+
         bool EditPersonMessageBox(string person)
         {
             DialogResult result = MessageBox.Show(string.Format("Personen {0} finns redan. Vill du ändra informationen på person?", person)
