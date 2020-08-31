@@ -18,8 +18,6 @@ namespace Övning_2_3
             InitializeComponent();
         }
 
-        double output;
-
         public void Start(TextBox errorTbx)
         {
             tbxBefore.Text = errorTbx.Text;

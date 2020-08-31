@@ -89,6 +89,7 @@
             this.Btn_BeräknaLöner.TabIndex = 22;
             this.Btn_BeräknaLöner.Text = "Beräkna Löner";
             this.Btn_BeräknaLöner.UseVisualStyleBackColor = true;
+            this.Btn_BeräknaLöner.Click += new System.EventHandler(this.Btn_BeräknaLöner_Click);
             // 
             // label10
             // 
@@ -148,6 +149,7 @@
             this.BtnRegMånadsLön.TabIndex = 3;
             this.BtnRegMånadsLön.Text = "Regestrera Månadslön";
             this.BtnRegMånadsLön.UseVisualStyleBackColor = true;
+            this.BtnRegMånadsLön.Click += new System.EventHandler(this.BtnRegMånadsLön_Click);
             // 
             // tbx_Kontorist_Månadslön
             // 
@@ -227,6 +229,7 @@
             this.BtnRegArbetspass.TabIndex = 3;
             this.BtnRegArbetspass.Text = "Regestrera Arbetsplass";
             this.BtnRegArbetspass.UseVisualStyleBackColor = true;
+            this.BtnRegArbetspass.Click += new System.EventHandler(this.BtnRegArbetspass_Click);
             // 
             // tbx_Konsult_Timlön
             // 
@@ -286,7 +289,7 @@
             this.tbx_Säljare_Försäljning.Location = new System.Drawing.Point(123, 121);
             this.tbx_Säljare_Försäljning.Name = "tbx_Säljare_Försäljning";
             this.tbx_Säljare_Försäljning.Size = new System.Drawing.Size(99, 23);
-            this.tbx_Säljare_Försäljning.TabIndex = 4;
+            this.tbx_Säljare_Försäljning.TabIndex = 3;
             // 
             // label3
             // 
@@ -303,7 +306,7 @@
             this.BtnRegaFörsäljning.Location = new System.Drawing.Point(59, 167);
             this.BtnRegaFörsäljning.Name = "BtnRegaFörsäljning";
             this.BtnRegaFörsäljning.Size = new System.Drawing.Size(163, 29);
-            this.BtnRegaFörsäljning.TabIndex = 3;
+            this.BtnRegaFörsäljning.TabIndex = 4;
             this.BtnRegaFörsäljning.Text = "Regestrera försäljning";
             this.BtnRegaFörsäljning.UseVisualStyleBackColor = true;
             this.BtnRegaFörsäljning.Click += new System.EventHandler(this.BtnRegaFörsäljning_Click_1);

@@ -27,7 +27,10 @@ namespace Övning_2_3
             double provision;
             double försäljning;
 
-            //FindAndRemoveDuplicate(namn);
+            if (!FindAndRemoveDuplicate(namn))
+            {
+                return;
+            }
 
             if (Parse_and_error(tbx_Säljare_Provision, out provision)
                 && Parse_and_error(tbx_Säljare_Försäljning, out försäljning))
@@ -35,10 +38,6 @@ namespace Övning_2_3
                 Anställd.anställdaLista.Add(new Säljare(namn, provision, försäljning));
                 ClearTextBoxes(säljareTbx);
                 RefreshRegisterDisplay();
-            }
-            else
-            {
-                ParseErrorMessageBox("");
             }
 
         }
@@ -56,14 +55,23 @@ namespace Övning_2_3
             }
         }
 
-        private void FindAndRemoveDuplicate(string namn)
+        private bool FindAndRemoveDuplicate(string namn)
         {
             if (Anställd.KollaOmRedanFinns(namn))
             {
                 if (EditPersonMessageBox(namn))
                 {
                     Anställd.anställdaLista.RemoveAt(Anställd.anställdaLista.FindIndex(temp => temp.namn == namn));
+                    return true;
                 }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return true;
             }
         }
 
@@ -125,6 +133,54 @@ namespace Övning_2_3
             säljareTbx = new TextBox[] { tbx_Säljare_Provision, tbx_Säljare_Namn, tbx_Säljare_Försäljning };
             konsultTbx = new TextBox[] { tbx_Konsult_Arbetadtid, tbx_Konsult_Namn, tbx_Konsult_Timlön };
             kontoristTbx = new TextBox[] { tbx_Kontorist_Månadslön, tbx_Kontorist_Namn };
+        }
+
+        private void BtnRegArbetspass_Click(object sender, EventArgs e)
+        {
+            string namn = tbx_Konsult_Namn.Text;
+            double arbetadTid;
+            double timLön;
+
+            if (!FindAndRemoveDuplicate(namn))
+            {
+                return;
+            }
+
+            if (Parse_and_error(tbx_Konsult_Arbetadtid, out arbetadTid)
+                && Parse_and_error(tbx_Konsult_Timlön, out timLön))
+            {
+                Anställd.anställdaLista.Add(new Konsult(namn, timLön, arbetadTid));
+                ClearTextBoxes(konsultTbx);
+                RefreshRegisterDisplay();
+            }
+        }
+
+        private void BtnRegMånadsLön_Click(object sender, EventArgs e)
+        {
+            string namn = tbx_Kontorist_Namn.Text;
+            double månadsLön;
+
+            if (!FindAndRemoveDuplicate(namn))
+            {
+                return;
+            }
+
+            if (Parse_and_error(tbx_Kontorist_Månadslön, out månadsLön))
+            {
+                Anställd.anställdaLista.Add(new Kontorist(namn, månadsLön));
+                ClearTextBoxes(kontoristTbx);
+                RefreshRegisterDisplay();
+            }
+        }
+
+        private void Btn_BeräknaLöner_Click(object sender, EventArgs e)
+        {
+            double totalLön = 0;
+            foreach (Anställd anställd in Anställd.anställdaLista)
+            {
+                totalLön += anställd.BeräknaLön();
+            }
+            tbxLönekostnad.Text = totalLön.ToString();
         }
     }
 }
