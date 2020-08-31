@@ -95,12 +95,10 @@ namespace Övning_2_2
         private void Btn_BeräknaLöner_Click(object sender, EventArgs e)
         {
             double totalLön = 0;
-
-            foreach (Anställd anstäld in Anställd.anställdaLista)
+            foreach (Anställd item in Anställd.anställdaLista)
             {
-                totalLön += anstäld.BeräknaLön();
+                totalLön += item.BeräknaLön();
             }
-
             tbxLönekostnad.Text = totalLön.ToString();
         }
 
@@ -136,6 +134,8 @@ namespace Övning_2_2
             DialogResult result = MessageBox.Show(string.Format("The {0} field was inputed wrong", inputThatWasWrong)
                 , "Parsing Error", MessageBoxButtons.OK);
         }
+
+
 
         bool EditPersonMessageBox(string person)
         {
