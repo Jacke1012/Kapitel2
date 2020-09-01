@@ -1,4 +1,4 @@
-﻿namespace Övning_2_3
+﻿namespace Parser
 {
     partial class Parse_error
     {
@@ -49,6 +49,7 @@
             // 
             // tbxBefore
             // 
+            this.tbxBefore.BackColor = System.Drawing.SystemColors.Control;
             this.tbxBefore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxBefore.Location = new System.Drawing.Point(288, 174);
             this.tbxBefore.Name = "tbxBefore";

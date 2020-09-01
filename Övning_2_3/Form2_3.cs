@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Parser;
 
 namespace Övning_2_3
 {
@@ -77,14 +78,6 @@ namespace Övning_2_3
             }
         }
 
-        void ParseErrorMessageBox(string inputThatWasWrong)
-        {
-            DialogResult result = MessageBox.Show(string.Format("The {0} field was inputed wrong", inputThatWasWrong)
-                , "Parsing Error", MessageBoxButtons.OK);
-        }
-
-
-
         bool EditPersonMessageBox(string person)
         {
             DialogResult result = MessageBox.Show(string.Format("Personen {0} finns redan. Vill du ändra informationen på person?", person)
@@ -113,9 +106,14 @@ namespace Övning_2_3
                 Parse_error parse_error = new Parse_error();
                 do
                 {
-                    parse_error.Start(textBoxToParse);
-                } while (parse_error.ShowDialog() == DialogResult.Cancel 
-                || !double.TryParse(parse_error.tbxAfter.Text, out tempResult));
+                    parse_error.Start(textBoxToParse.Text);
+                    if (parse_error.ShowDialog() == DialogResult.Cancel)
+                    {
+                        output = -1.0;
+                        return false;
+                    }
+                    textBoxToParse = parse_error.tbxAfter;
+                } while (!double.TryParse(parse_error.tbxAfter.Text, out tempResult));
                 output = tempResult;
                 return true;
             }

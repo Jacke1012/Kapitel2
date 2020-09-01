@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7760E046-9F42-43AE-B594-2FB3871C3E38}</ProjectGuid>
+    <ProjectGuid>{09F7A74A-B072-4FBB-B3ED-03150A091420}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Övning_2_3</RootNamespace>
-    <AssemblyName>Övning_2_3</AssemblyName>
+    <RootNamespace>Parser</RootNamespace>
+    <AssemblyName>Parser</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Anställd.cs" />
-    <Compile Include="Form2_3.cs">
+    <Compile Include="Parse_error.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2_3.Designer.cs">
-      <DependentUpon>Form2_3.cs</DependentUpon>
+    <Compile Include="Parse_error.Designer.cs">
+      <DependentUpon>Parse_error.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form2_3.resx">
-      <DependentUpon>Form2_3.cs</DependentUpon>
+    <EmbeddedResource Include="Parse_error.resx">
+      <DependentUpon>Parse_error.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -79,12 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Parser\Parser.csproj">
-      <Project>{09f7a74a-b072-4fbb-b3ed-03150a091420}</Project>
-      <Name>Parser</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

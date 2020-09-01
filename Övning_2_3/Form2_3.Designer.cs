@@ -67,6 +67,7 @@
             this.tbxLönekostnad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxLönekostnad.Location = new System.Drawing.Point(806, 462);
             this.tbxLönekostnad.Name = "tbxLönekostnad";
+            this.tbxLönekostnad.ReadOnly = true;
             this.tbxLönekostnad.Size = new System.Drawing.Size(148, 23);
             this.tbxLönekostnad.TabIndex = 24;
             // 

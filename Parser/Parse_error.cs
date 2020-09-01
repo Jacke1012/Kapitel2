@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Övning_2_3
+namespace Parser
 {
     public partial class Parse_error : Form
     {
@@ -11,9 +11,10 @@ namespace Övning_2_3
             InitializeComponent();
         }
 
-        public void Start(TextBox errorTbx)
+        public void Start(string errorTbx)
         {
-            tbxBefore.Text = errorTbx.Text;
+            tbxAfter.Clear();
+            tbxBefore.Text = errorTbx;
         }
 
 
