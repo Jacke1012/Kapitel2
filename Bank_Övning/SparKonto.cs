@@ -10,7 +10,6 @@ namespace Bank_Övning
     {
         public SparKonto(string personNummer, double ränteSats) : base(personNummer, ränteSats)
         {
-
         }
 
         public override bool Uttag(double belopp)
