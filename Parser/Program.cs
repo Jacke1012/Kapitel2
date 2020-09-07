@@ -16,7 +16,7 @@ namespace Parser
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Parse_error());
+            Application.Run(new TryParse());
         }
     }
 }

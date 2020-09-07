@@ -103,7 +103,7 @@ namespace Övning_2_3
             }
             else
             {
-                Parse_error parse_error = new Parse_error();
+                TryParse parse_error = new TryParse();
                 do
                 {
                     parse_error.Start(textBoxToParse.Text);

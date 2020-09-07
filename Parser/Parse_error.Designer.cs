@@ -1,6 +1,6 @@
 ﻿namespace Parser
 {
-    partial class Parse_error
+    partial class TryParse
     {
         /// <summary>
         /// Required designer variable.

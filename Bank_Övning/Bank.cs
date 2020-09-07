@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace Bank_Övning
 {
-    class Bank
+    static class Bank
     {
-        List<BankKonto> bankKonton = new List<BankKonto>();
+        public static List<BankKonto> bankKonton = new List<BankKonto>();
 
-
+        public static void UpdateraMedÅrsränta()
+        {
+            foreach (BankKonto konto in bankKonton)
+            {
+                konto.BeräknaRänta();
+            }
+        }
     }
 }

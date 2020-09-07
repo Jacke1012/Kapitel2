@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Bank_Övning
 {
-    class BankKonto
+    abstract class BankKonto
     {
         protected string personNummer;
         protected double behållning;
         protected double ränteSats;
+
+        protected BankKonto(string personNummer, double ränteSats)
+        {
+            this.personNummer = personNummer;
+            this.ränteSats = ränteSats;
+        }
 
         double Behållning()
         {
@@ -22,23 +28,9 @@ namespace Bank_Övning
             behållning += belopp;
         }
 
-        public bool Uttag(double belopp)
-        {
-            if (behållning - belopp > 0)
-            {
-                behållning -= belopp;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        public abstract bool Uttag(double belopp);
 
-        public double BeräknaRänta()
-        {
-            return behållning * ränteSats;
-        }
+        public abstract double BeräknaRänta();
 
         public override string ToString()
         {
