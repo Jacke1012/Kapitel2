@@ -9,6 +9,10 @@ namespace Bank_Övning
 {
     public class MyTextBox : TextBox
     {
+        public MyTextBox()
+        {
+        }
+
         public string description { get; private set; }
     }
 }
