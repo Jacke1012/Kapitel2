@@ -22,6 +22,8 @@ namespace Bank_Övning
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Bank.LoadAccounts();
+
             lblKredit.Visible = false;
             tbxKredit.Visible = false;
 
@@ -39,6 +41,8 @@ namespace Bank_Övning
             // Set up the ToolTip text for the Button and Checkbox.
             toolTip1.SetToolTip(tbxRänesats, "I procent");
             toolTip1.SetToolTip(lblRänte, "I procent");
+
+            RefreshListBox();
         }
 
         private void BtnRegestrera_Click(object sender, EventArgs e)
@@ -82,7 +86,7 @@ namespace Bank_Övning
         {
             if (lbxKonton.SelectedIndex == -1)
             {
-                MessageBox.Show("Du har inga konton", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Du har inga valt något konto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             double belopp;
@@ -99,7 +103,7 @@ namespace Bank_Övning
         {
             if (lbxKonton.SelectedIndex == -1)
             {
-                MessageBox.Show("Du har inga konton", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Du har inga valt något konto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             double belopp;
@@ -115,6 +119,23 @@ namespace Bank_Övning
         {
             Bank.UpdateraMedÅrsränta();
             RefreshListBox();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Bank.SaveAccounts();
+        }
+
+        private void lbxKonton_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete || e.KeyCode == Keys.Back)
+            {
+                if (lbxKonton.SelectedIndex != -1)
+                {
+                    Bank.DeleteAccount(lbxKonton.SelectedIndex);
+                    RefreshListBox();
+                }
+            }
         }
     }
 }

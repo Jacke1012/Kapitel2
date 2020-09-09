@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Bank_Övning
 {
+    [DataContract]
     class SparKonto : BankKonto
     {
         public SparKonto(string personNummer, double ränteSats) : base(personNummer, ränteSats)

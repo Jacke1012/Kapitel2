@@ -6,7 +6,7 @@ namespace Parser
     public partial class TryParse : Form
     {
 
-        public static bool Double(TextBox textBoxToParse, out double output)
+        public static bool Double(TextBox textBoxToParse, out double output, string itemDescription = "")
         {
             double tempResult = 0f;
             if (double.TryParse(textBoxToParse.Text, out tempResult))
@@ -19,7 +19,7 @@ namespace Parser
                 TryParse parse_error = new TryParse();
                 do
                 {
-                    parse_error.Start(textBoxToParse.Text);
+                    parse_error.Start(textBoxToParse.Text, itemDescription);
                     if (parse_error.ShowDialog() == DialogResult.Cancel)
                     {
                         output = -1.0;
@@ -37,10 +37,12 @@ namespace Parser
             InitializeComponent();
         }
 
-        public void Start(string errorTbx)
+        public void Start(string errorTbx, string description)
         {
             tbxAfter.Clear();
             tbxBefore.Text = errorTbx;
+            lblDescription1.Text = description;
+            lblDescription2.Text = description;
         }
 
 

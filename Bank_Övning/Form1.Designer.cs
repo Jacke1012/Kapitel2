@@ -34,6 +34,7 @@
             this.tbxBelopp = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkKredit = new System.Windows.Forms.CheckBox();
             this.BtnRegestrera = new System.Windows.Forms.Button();
             this.tbxKredit = new System.Windows.Forms.TextBox();
             this.lblKredit = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbxKonton = new System.Windows.Forms.ListBox();
             this.BtnUpdatera = new System.Windows.Forms.Button();
-            this.checkKredit = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -114,6 +114,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Öppna konto";
             // 
+            // checkKredit
+            // 
+            this.checkKredit.AutoSize = true;
+            this.checkKredit.Location = new System.Drawing.Point(32, 83);
+            this.checkKredit.Name = "checkKredit";
+            this.checkKredit.Size = new System.Drawing.Size(81, 17);
+            this.checkKredit.TabIndex = 7;
+            this.checkKredit.Text = "Låne Konto";
+            this.checkKredit.UseVisualStyleBackColor = true;
+            this.checkKredit.CheckedChanged += new System.EventHandler(this.checkKredit_CheckedChanged);
+            // 
             // BtnRegestrera
             // 
             this.BtnRegestrera.Location = new System.Drawing.Point(123, 124);
@@ -179,6 +190,7 @@
             this.lbxKonton.Name = "lbxKonton";
             this.lbxKonton.Size = new System.Drawing.Size(274, 147);
             this.lbxKonton.TabIndex = 2;
+            this.lbxKonton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lbxKonton_KeyDown);
             // 
             // BtnUpdatera
             // 
@@ -189,17 +201,6 @@
             this.BtnUpdatera.Text = "Uppdatera med årsränta";
             this.BtnUpdatera.UseVisualStyleBackColor = true;
             this.BtnUpdatera.Click += new System.EventHandler(this.BtnUpdatera_Click);
-            // 
-            // checkKredit
-            // 
-            this.checkKredit.AutoSize = true;
-            this.checkKredit.Location = new System.Drawing.Point(32, 83);
-            this.checkKredit.Name = "checkKredit";
-            this.checkKredit.Size = new System.Drawing.Size(81, 17);
-            this.checkKredit.TabIndex = 7;
-            this.checkKredit.Text = "Låne Konto";
-            this.checkKredit.UseVisualStyleBackColor = true;
-            this.checkKredit.CheckedChanged += new System.EventHandler(this.checkKredit_CheckedChanged);
             // 
             // Form1
             // 
@@ -212,6 +213,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
