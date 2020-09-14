@@ -38,7 +38,7 @@
             this.BtnRegestrera = new System.Windows.Forms.Button();
             this.tbxKredit = new System.Windows.Forms.TextBox();
             this.lblKredit = new System.Windows.Forms.Label();
-            this.tbxRänesats = new MyTextBox();
+            this.tbxRänesats = new System.Windows.Forms.TextBox();
             this.lblRänte = new System.Windows.Forms.Label();
             this.tbxPersonNr = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -236,7 +236,7 @@
         private System.Windows.Forms.Button BtnRegestrera;
         private System.Windows.Forms.TextBox tbxKredit;
         private System.Windows.Forms.Label lblKredit;
-        private MyTextBox tbxRänesats;
+        private System.Windows.Forms.TextBox tbxRänesats;
         private System.Windows.Forms.Label lblRänte;
         private System.Windows.Forms.ListBox lbxKonton;
         private System.Windows.Forms.Button BtnUpdatera;
