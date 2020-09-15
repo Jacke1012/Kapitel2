@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank_Övning", "Bank_Övnin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface_Figurer", "Interface_Figurer\Interface_Figurer.csproj", "{7E39FB74-CC59-4500-98C0-D94874715E24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinLista", "MinLista\MinLista.csproj", "{BC06EB2E-8B70-4144-BBE6-C26A5BB0168C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7E39FB74-CC59-4500-98C0-D94874715E24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E39FB74-CC59-4500-98C0-D94874715E24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E39FB74-CC59-4500-98C0-D94874715E24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC06EB2E-8B70-4144-BBE6-C26A5BB0168C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC06EB2E-8B70-4144-BBE6-C26A5BB0168C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC06EB2E-8B70-4144-BBE6-C26A5BB0168C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC06EB2E-8B70-4144-BBE6-C26A5BB0168C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -62,9 +62,18 @@ namespace Interface_Figurer
             {
                 objParam[i] = parametors[i];
             }
-            IArea instance = (IArea)Activator.CreateInstance(lbxFigurer.SelectedItem.GetType(), objParam);
+            Figur instance = (Figur)Activator.CreateInstance(lbxFigurer.SelectedItem.GetType(), objParam);
+
+            if (instance is IArea)
+            {
+                tbxDisplay.AppendText($"{instance}, Area: {((IArea)instance).BeräknaArea()}\r\n");
+            }
+            else
+            {
+                tbxDisplay.AppendText($"{instance}, Längd: {instance.höjd}\r\n");
+            }
+
             
-            tbxDisplay.AppendText($"{instance}, Area: {instance.BeräknaArea()}");
         }
     }
 }

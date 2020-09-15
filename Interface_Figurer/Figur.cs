@@ -4,7 +4,8 @@ namespace Interface_Figurer
 {
     public abstract class Figur
     {
-        protected double höjd, bredd;
+        public double höjd { get; protected set; }
+        public double bredd { get; protected set; }
 
         public Figur(double höjd, double bredd)
         {
@@ -16,5 +17,7 @@ namespace Interface_Figurer
         {
             return GetType().Name;
         }
+
+        
     }
 }

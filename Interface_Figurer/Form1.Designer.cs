@@ -99,6 +99,7 @@
             this.tbxDisplay.Location = new System.Drawing.Point(580, 55);
             this.tbxDisplay.Multiline = true;
             this.tbxDisplay.Name = "tbxDisplay";
+            this.tbxDisplay.ReadOnly = true;
             this.tbxDisplay.Size = new System.Drawing.Size(180, 233);
             this.tbxDisplay.TabIndex = 6;
             // 
