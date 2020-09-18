@@ -22,7 +22,8 @@ namespace Bank_Övning
 
         public override double BeräknaRänta()
         {
-            return behållning -= behållning * ränteSats;
+            behållning += behållning * ränteSats; //plus minus
+            return behållning;
         }
 
         public override bool Uttag(double belopp)
