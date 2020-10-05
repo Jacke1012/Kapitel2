@@ -36,6 +36,10 @@ namespace Bank_Övning
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) 
                 + "\\Bank\\Save.xml";
 
+            if (!File.Exists(path))
+            {
+                return;
+            }
             FileStream fs = new FileStream(path, FileMode.Open);
 
             DataContractSerializer ser = new DataContractSerializer(typeof(List<BankKonto>));
