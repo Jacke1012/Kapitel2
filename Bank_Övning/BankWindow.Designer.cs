@@ -1,6 +1,6 @@
 ﻿namespace Bank_Övning
 {
-    partial class Form1
+    partial class BankWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -202,7 +202,7 @@
             this.BtnUpdatera.UseVisualStyleBackColor = true;
             this.BtnUpdatera.Click += new System.EventHandler(this.BtnUpdatera_Click);
             // 
-            // Form1
+            // BankWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,8 +211,8 @@
             this.Controls.Add(this.lbxKonton);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "BankWindow";
+            this.Text = "Bank";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

@@ -3,9 +3,18 @@ using System.Windows.Forms;
 
 namespace Parser
 {
+    /// <summary>
+    /// Try parsing
+    /// </summary>
     public partial class TryParse : Form
     {
-
+        /// <summary>
+        /// TryParse
+        /// </summary>
+        /// <param name="textBoxToParse">Textbox</param>
+        /// <param name="output">output</param>
+        /// <param name="itemDescription">Optional description</param>
+        /// <returns></returns>
         public static bool Double(TextBox textBoxToParse, out double output, string itemDescription = "")
         {
             double tempResult = 0f;
