@@ -1,5 +1,4 @@
-﻿
-namespace MinLista
+﻿namespace MinLista
 {
     public class Samling<T>
     {
